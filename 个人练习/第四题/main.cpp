@@ -14,7 +14,7 @@ using namespace std;
 void menu() {
 	cout << "*************************************" << endl;
 	cout << "*************  1. play  *************" << endl;
-	cout << "*************  2. exit  *************" << endl;
+	cout << "*************  0. exit  *************" << endl;
 	cout << "*************************************" << endl;
 }
 /*
@@ -66,16 +66,16 @@ int main() {
 			ru = dis(gen);
 			playGame(ru);
 			break;
-		case 2:
+		case 0:
 			cout << "退出游戏" << endl;
-			goto exit;
-			//break;
+			//goto exit;
+			break;
 		default:
 			system("cls");
 			cout << "选择错误!重新选择" << endl;
 			break;
 		}
 	} while (index);
-exit:
+//exit:
 	return 0;
 }

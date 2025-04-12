@@ -15,7 +15,7 @@
 void menu() {
 	printf("*************************************\n");
 	printf("*************  1. play  *************\n");
-	printf("*************  2. exit  *************\n");
+	printf("*************  0. exit  *************\n");
 	printf("*************************************\n");
 }
 
@@ -31,7 +31,8 @@ void playGame() {
 	int num = 0;
 	// 1. 生成一个正整数(1 ~ 100) 之间	
 	// 取模 100 获得 0 ~ 99 所以在加一	
-	num = (rand() % 100) + 1;				
+	num = (rand() % 100) + 1;
+	system("cls");
 	// 2. 猜数字
 	while (1) {
 		printf("输入猜数字:>");
@@ -68,16 +69,16 @@ int main() {
 			//printf("开始游戏\n");
 			playGame();
 			break;
-		case 2:
+		case 0:
 			printf("退出游戏\n");
-			goto exit;
-			//break;
+			//goto exit;
+			break;
 		default:
 			system("cls");
 			printf("选择有误,重新选择\n");
 			break;
 		}
 	} while (index);
-exit:
+//exit:
 	return 0;
 }
