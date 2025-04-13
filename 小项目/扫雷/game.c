@@ -21,14 +21,12 @@ void disPlayBoard(char board[ROWS][COLS], int row, int col) {
 	for (i = 1;i <= row;i++) {
 		printf("%d ", i);
 		for (j = 1;j <= col;j++) {
-			if (board[i][j] == '0' || board[i][j] == 'S') {
+			if (board[i][j] == '0') {
 				printf("  ");
-				//board[i][j] = ' ';
 			}
 			else {
 				printf("%c ", board[i][j]);
 			}
-			//printf("%c ", board[i][j]);
 		}
 		printf("\n");
 	}
@@ -85,7 +83,7 @@ void findMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col) {
 				// 统计 mine 数组中，x、y坐标 周围有几个雷
 				int ret = getMineCount(mine,x,y);
 				if (ret == 0) {
-					show[x][y] = 'S';
+					show[x][y] = ' ';
 				}
 				else {
 					show[x][y] = ret + '0';
@@ -106,6 +104,7 @@ void findMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col) {
 			system("cls");
 			printf("恭喜你！游戏通关\n");
 			printf("%d 秒后可重新游戏！\n", s);
+			disPlayBoard(mine, ROW, COL);
 			Sleep(1000);
 			s--;
 		}	

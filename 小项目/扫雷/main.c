@@ -1,4 +1,9 @@
 #include "game.h"
+/*
+	可添加功能
+	1、标记功能
+	2、展开一片功能
+*/
 void menu() {
 	printf("*******************************\n");
 	printf("*******     1、play     *******\n");
@@ -15,7 +20,6 @@ void playGame() {
 	// 设置雷
 	setMine(mine, ROW, COL);
 	// show 数组在没有初始化的时候 都是 '*'
-	// show 'S' (security)表示安全 周围没有雷
 	initBoard(show,ROWS,COLS,'*');
 
 	//disPlayBoard(mine,ROW,COL);
