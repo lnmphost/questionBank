@@ -3,19 +3,10 @@
 #### Description
 用于存放自己练习编程代码
 
-#### Software Architecture
-Software architecture description
+#### description
 
-#### Installation
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Instructions
-
-1.  xxxx
-2.  xxxx
+1.  C 语言
+2.  C++ 语言
 3.  xxxx
 
 #### Contribution
