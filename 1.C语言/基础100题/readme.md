@@ -137,3 +137,9 @@
 ### 第三十三题：学习clrscr()函数与gotoxy()
 
 > clrscr() 清屏函数   gotoxy(1,5)  定位函数
+>
+> 重写了通用方式： Linux/macOS用clear，Windows用cls
+
+### 第三十四题：练习函数调用
+
+> 自定义函数调用
